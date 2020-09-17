@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Registration and Calculating Fees on Scholarship and Caste</title>
+</head>
+
+<body>
+  <h3><marquee behavior="alternate">“Registration closes by 30-June 2020."</marquee></h3>
+  <div id = "response" style="text-align: center;"></div>
+  <h4> Student Registration on Blockchain.</h4>
+  <div id="banner">
+   
+  </div>
+   <div style="text-align: center;">
+     <label><b>Student info:</b></label>
+     <b></b>
+     <p><b>Address:</b><input type="number" id="address" placeholder=" Address" required /></p>
+<p></p><b>Name:</b><input type="text" id="name" placeholder="Student Name" required /></p>
+<p></p><label>Enter a date between 2020-01-01: 2020-12-31</label></p>
+<p></p><b>Date:</b><input type="date" name="myDate" min="2020-01-01" max="2020-12-31"></p>
+<p></p><b>Class:</b><input type="number" id="class" placeholder="Student Class" required /></p>
+<p></p><b>Rollno:</b><input type="number" id="rollno" placeholder=" Student Rollno" required /></p>
+<h4> Caste (General = 1, BC = 2, ST = 3, SC = 4).</h4>
+<p></p><b>Caste:</b><input type="number" id="caste" placeholder="Student Caste" required /></p>
+<p></p><b>Marks:</b><input type="number" id="marks" placeholder="Student Marks" required /></p>
+<button id="createAsset">Create Student</button>
+</div>
+<div style="text-align: center;">
+<p></p><label><b>Student Details:</b></label></p>
+<input type="number" id="trackstudent" placeholder="Address" required />
+<button id="trackinfo">Student Details</button>
+</div>
+</br>
+<div id = "response" style="text-align: center;">
+<p><b>Name:</b><span id="Name">??</span></p>
+<p><b>Class:</b><span id="Class">??</span></p>
+<p><b>Roll no:</b><span id="Rollno">??</span></p>
+<p><b>Caste:</b><span id="Caste">??</span></p>
+<p><b>Marks:</b><span id="Marks">??</span></p>
+<p><b>Total Fee:</b><span id="Fee">??</span></p>
+
+</div>
+</br>
+<div id = "response" style="text-align: center;">
+<button id="Student">Student Count</button>
+<p><b>Student Count:</b><span id="counts">??</span></p>
+</div>
+<hr>
+<div id="log" style="text-align: center;"></div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="js/web3.min.js"></script>
+<script src= "js/index.js"></script>
+</body>
+<footer style="text-align: right;">
+<h6>&copy I Teja Sai </h6>
+</footer>
+</html>

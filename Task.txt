@@ -1,0 +1,16 @@
+Blockchain Developer's 
+
+Complete this Task's by Tuesday (i.e Sept -08) and submit it by Wednesday ( i.e Sept -09)
+ 
+As I told before you all have to edit only two files i.e College.sol and index.js(web3 file in src folder)
+
+I have mentioned what you'll have to do in the Contract.sol file, Please have a look and let me know if you have any problem.
+
+In index.js file, you'll need to understand the flow and what changes I have made and edit them accordingly.
+
+I hope Every Student will Complete these Tasks with same Enthusaim you'll showed throughout the course.
+
+Blockchain Developer's always give first priority to flow and logic and later the code will automatically align accordingly.
+
+Happy Coding
+
