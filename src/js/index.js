@@ -24,70 +24,38 @@ function log(message) {
       }
     });
   }
-  const address = "0x3Abba38Da77941090dcf7350a369b75ddfD52cD0";
+  const address = "0xC7FA0E56df0F352E8944500527B22749EC8D16DD";
   const abi =  [
     {
-      "inputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "anonymous": false,
+      "constant": true,
       "inputs": [
         {
-          "indexed": false,
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "class",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "rollno",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "Caste",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "marks",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "_aDdress",
-          "type": "uint256"
-        },
-        {
-          "indexed": false,
-          "internalType": "uint256",
-          "name": "total",
-          "type": "uint256"
+          "name": "",
+          "type": "address"
         }
       ],
-      "name": "School",
-      "type": "event"
+      "name": "candidateExist",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     },
     {
       "constant": true,
-      "inputs": [],
-      "name": "fInalamount",
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "consituencyList",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
@@ -100,15 +68,339 @@ function log(message) {
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
       ],
-      "name": "studentsAccts",
+      "name": "votersList",
       "outputs": [
         {
-          "internalType": "uint256",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "electionName",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "candidateData",
+      "outputs": [
+        {
+          "name": "candidateId",
+          "type": "address"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "phoneNo",
+          "type": "string"
+        },
+        {
+          "name": "consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "party",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "candidateList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "voterExist",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "voterData",
+      "outputs": [
+        {
+          "name": "voterId",
+          "type": "address"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "email",
+          "type": "string"
+        },
+        {
+          "name": "phoneNo",
+          "type": "string"
+        },
+        {
+          "name": "consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "age",
+          "type": "uint8"
+        },
+        {
+          "name": "voted",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "consituencyExist",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "admin",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "consituencyData",
+      "outputs": [
+        {
+          "name": "consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "winner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_durationInMinutes",
+          "type": "uint256"
+        },
+        {
+          "name": "_admin",
+          "type": "address"
+        },
+        {
+          "name": "_electionName",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "addConsituency",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getConsituencyIdList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_candidateId",
+          "type": "address"
+        },
+        {
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "name": "_email",
+          "type": "string"
+        },
+        {
+          "name": "_phoneNo",
+          "type": "string"
+        },
+        {
+          "name": "_consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "_party",
+          "type": "string"
+        }
+      ],
+      "name": "addCandidate",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCandidatesIdList",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_consituencyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getConsituencyCandidates",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCandidateConsituency",
+      "outputs": [
+        {
           "name": "",
           "type": "uint256"
         }
@@ -121,63 +413,44 @@ function log(message) {
       "constant": false,
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "_aDdress",
-          "type": "uint256"
+          "name": "_voterId",
+          "type": "address"
         },
         {
-          "internalType": "string",
-          "name": "nAme",
+          "name": "_name",
           "type": "string"
         },
         {
-          "internalType": "uint256",
-          "name": "cLass",
+          "name": "_email",
+          "type": "string"
+        },
+        {
+          "name": "_phoneNo",
+          "type": "string"
+        },
+        {
+          "name": "_consituencyId",
           "type": "uint256"
         },
         {
-          "internalType": "uint256",
-          "name": "rOllno",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "cAste",
-          "type": "uint256"
-        },
-        {
-          "internalType": "uint256",
-          "name": "mArks",
-          "type": "uint256"
+          "name": "_age",
+          "type": "uint8"
         }
       ],
-      "name": "setStudentinfo",
+      "name": "addVoter",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getVotersIdList",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": true,
-      "stateMutability": "payable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_address",
-          "type": "uint256"
-        }
-      ],
-      "name": "Name",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "name",
-          "type": "string"
+          "type": "address[]"
         }
       ],
       "payable": false,
@@ -188,101 +461,15 @@ function log(message) {
       "constant": true,
       "inputs": [
         {
-          "internalType": "uint256",
-          "name": "_address",
+          "name": "_consituencyId",
           "type": "uint256"
         }
       ],
-      "name": "Class",
+      "name": "getConsituencyVoters",
       "outputs": [
         {
-          "internalType": "uint256",
-          "name": "class",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_address",
-          "type": "uint256"
-        }
-      ],
-      "name": "Rollno",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "rollno",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_address",
-          "type": "uint256"
-        }
-      ],
-      "name": "Castes",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "Caste",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_address",
-          "type": "uint256"
-        }
-      ],
-      "name": "Marks",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "marks",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "internalType": "uint256",
-          "name": "_address",
-          "type": "uint256"
-        }
-      ],
-      "name": "Totall",
-      "outputs": [
-        {
-          "internalType": "uint256",
-          "name": "total",
-          "type": "uint256"
+          "name": "",
+          "type": "address[]"
         }
       ],
       "payable": false,
@@ -292,10 +479,9 @@ function log(message) {
     {
       "constant": true,
       "inputs": [],
-      "name": "countStudent",
+      "name": "getVoterConsituency",
       "outputs": [
         {
-          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
@@ -305,41 +491,85 @@ function log(message) {
       "type": "function"
     },
     {
-      "constant": true,
-      "inputs": [],
-      "name": "getamount",
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "_candidateId",
+          "type": "address"
+        }
+      ],
+      "name": "castVote",
       "outputs": [
         {
-          "internalType": "uint256",
+          "name": "status",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_consituencyId",
+          "type": "uint256"
+        },
+        {
+          "name": "_candidateId",
+          "type": "address"
+        }
+      ],
+      "name": "getVotes",
+      "outputs": [
+        {
           "name": "",
           "type": "uint256"
         }
       ],
       "payable": false,
       "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "closeElection",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ];
+
+
    $(function () {
-    var College;
+    var Election;
    
-     $('#trackinfo').click(function (e) {
+     $('#getcandidatelist').click(function (e) {
       e.preventDefault();
-      College.Name.call(document.getElementById("trackstudent").value, function (err, re) {
+      Election.getCandidatesIdList.call(function (err, re) {
         if (err) {
           return error(err);
         } 
+
+        window.alert(re);
         // The return value is a BigNumber object
-        document.getElementById("Name").innerHTML = re ;
+        // document.getElementById("Name").innerHTML = re ;
       });
-      College.Class.call(document.getElementById("trackstudent").value, function (err, resul) {
+      Election.Class.call(document.getElementById("trackstudent").value, function (err, resul) {
         if (err) {
           return error(err);
         } 
         // The return value is a BigNumber object
         document.getElementById("Class").innerHTML = resul ;
       });
-       College.Rollno.call(document.getElementById("trackstudent").value, function (err, resu) {
+       Election.Rollno.call(document.getElementById("trackstudent").value, function (err, resu) {
         if (err) {
           return error(err);
         } 
@@ -347,7 +577,7 @@ function log(message) {
        document.getElementById("Rollno").innerHTML = resu;
       });
 
-      College.Castes.call(document.getElementById("trackstudent").value, function (err, resul) {
+      Election.Castes.call(document.getElementById("trackstudent").value, function (err, resul) {
         if (err) {
           return error(err);
         } 
@@ -355,7 +585,7 @@ function log(message) {
         document.getElementById("Caste").innerHTML = resul ;
       });
  
-      College.Marks.call(document.getElementById("trackstudent").value, function (err, resul) {
+      Election.Marks.call(document.getElementById("trackstudent").value, function (err, resul) {
         if (err) {
           return error(err);
         } 
@@ -363,7 +593,7 @@ function log(message) {
         document.getElementById("Marks").innerHTML = resul ;
       });
   
-      College.Totall.call(document.getElementById("trackstudent").value, function (err, resul) {
+      Election.Totall.call(document.getElementById("trackstudent").value, function (err, resul) {
         if (err) {
           return error(err);
         } 
@@ -373,7 +603,7 @@ function log(message) {
      });
      $('#Student').click(function (e) {
       e.preventDefault();
-      College.countStudent.call( function (err, result1) {
+      Election.countStudent.call( function (err, result1) {
         if (err) {
           return error(err);
         } 
@@ -381,20 +611,23 @@ function log(message) {
         document.getElementById("counts").innerHTML = result1;
       });
     });
-    $('#createAsset').click(function (e) {
+
+    $('#addvoter').click(function (e) {
       e.preventDefault();
+      web3.eth.defaultAccount = web3.eth.accounts[0];
+      console.log(web3.eth.defaultAccount);
       if(web3.eth.defaultAccount === undefined) {
         return error("No accounts found. If you're using MetaMask, " +
                      "please unlock it first and reload the page.");
       }
       log("Transaction On its Way...");
-      College.setStudentinfo.sendTransaction(
-      document.getElementById("address").value,
-      document.getElementById("name").value,
-      document.getElementById("class").value,
-      document.getElementById("rollno").value,
-      document.getElementById("caste").value,
-      document.getElementById("marks").value,
+      Election.addVoter.sendTransaction(
+      document.getElementById("voterid").value,
+      document.getElementById("votername").value,
+      document.getElementById("voteremail").value,
+      document.getElementById("voterphone").value,
+      document.getElementById("voterconstituency").value,
+      document.getElementById("voterage").value,
       function (err, hash) {
         if (err) {
           return error(err);
@@ -421,10 +654,11 @@ function log(message) {
       web3 = new Web3(web3.currentProvider);
       ethereum.enable();
       if (web3.version.network != 4) {
-        error("Wrong network detected. Please switch to the Rinkeby test network.");
+        error("Wrong network detected. Please switch to the rinkeby test network.");
       } else {
         log("Connected to the Rinkeby test network.");
-        College = web3.eth.contract(abi).at(address);
+        Election = web3.eth.contract(abi).at(address);
+        // console.log(Election);
         }
     }
   });

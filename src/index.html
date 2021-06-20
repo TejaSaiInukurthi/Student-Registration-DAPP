@@ -1,18 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Student Registration and Calculating Fees on Scholarship and Caste</title>
+  <title>Election</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <h3><marquee behavior="alternate">“Registration closes by 30-June 2020."</marquee></h3>
+  <h3><marquee behavior="alternate">“Election Ends by 30-June 2020."</marquee></h3>
   <div id = "response" style="text-align: center;"></div>
-  <h4> Student Registration on Blockchain.</h4>
+  <h1> Election DAPP</h1>
   <div id="banner">
    
   </div>
-   <div style="text-align: center;">
-     <label><b>Student info:</b></label>
+   <div class="container">
+  <div class="row">
+  <h3>Add Candidate</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateId">CandidateId:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="candidateId" placeholder="Enter CanidateId(address)" name="candidateId">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Name">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="candidateName" placeholder="Enter CanidateId(address)" name="candidateName">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateemail">Email:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="candidateemail" placeholder="Enter Email" name="email">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="PhoneNo">PhoneNo:</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="canidatephoneno" placeholder="Enter PhoneNO" name="phooneno">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateconstituency">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="candidateconstituency" placeholder="Enter Candidate Name" name="candidateconstituency">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateparty">Party</label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="candidateparty" placeholder="Enter party" name="candidateparty">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">addCandidate</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+ <div class="row">
+  <h3>Add Constituency</h3>
+  <form class="form-horizontal">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="constituencyId">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="constituencyId" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="constituencyName">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="constituencyName" placeholder="Enter Constituency Name" name="constituencyName">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <h3>Add Voter</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="voterid">VoterId:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voterid" placeholder="Enter CanidateId(address)" name="voterid">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="votername">Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="votername" placeholder="Enter Voter name" name="votername">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="voteremail">Email:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voteremail" placeholder="Enter Email" name="voteremail">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="voterphone">PhoneNo:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voterphone" placeholder="Enter PhoneNO" name="=voterphone">
+      </div>
+    </div>
+     <div class="form-group">
+      <label class="control-label col-sm-2" for="voterconstituency">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voterconstituency" placeholder="Enter Candidate Name" name="voterconstituency">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="voterage">Age</label>
+      <div class="col-sm-10">          
+        <input type="number" class="form-control" id="voterage" placeholder="Enter age" name="voterage">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-default" id="addvoter">addCandidate</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <h3>Caste Vote</h3>
+  <form class="form-horizontal">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="constituencyId">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voteconstituencyId" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Candidate Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voteconstituencyid" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Caste Vote</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <h3>Cancel Election</h3>
+  <form class="form-horizontal">
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Cancel Election</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <h3>Get Admin</h3>
+  <form class="form-horizontal">
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Get Admin</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <h3>Candidate Data</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Candidate Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="getcandidateconstituencyid" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Get Candidate Data</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <h3>Candidate Exist</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Candidate Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="candidateexistconstituencyid" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-default">Candidate Exist</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <h3>Constituency Data</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="getconstituencydata" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-default" id="getconstituency">Get Constituency Data</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <h3>Constituency Exist</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="constituencyExist" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">check Constituency</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <h3>Get CandidateList</h3>
+  <form class="form-horizontal">
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-default" id="getcandidatelist">Get CandidateList</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <h3>Get VotersList</h3>
+  <form class="form-horizontal">
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Get Voterlist</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<div class="row">
+  <h3>Get Votes</h3>
+  <form class="form-horizontal">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="constituencyId">Constituency Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="resultsconstituencyId" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+
+      <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Candidate Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="resultsdfsaconstituencyid" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Caste Vote</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+     <!--  --><!-- span --><!-- <label><b>Student info:</b></label>
      <b></b>
      <p><b>Address:</b><input type="number" id="address" placeholder=" Address" required /></p>
 <p></p><b>Name:</b><input type="text" id="name" placeholder="Student Name" required /></p>
@@ -37,13 +333,8 @@
 <p><b>Roll no:</b><span id="Rollno">??</span></p>
 <p><b>Caste:</b><span id="Caste">??</span></p>
 <p><b>Marks:</b><span id="Marks">??</span></p>
-<p><b>Total Fee:</b><span id="Fee">??</span></p>
+<p><b>Total Fee:</b><span id="Fee">??</p> -->
 
-</div>
-</br>
-<div id = "response" style="text-align: center;">
-<button id="Student">Student Count</button>
-<p><b>Student Count:</b><span id="counts">??</span></p>
 </div>
 <hr>
 <div id="log" style="text-align: center;"></div>
