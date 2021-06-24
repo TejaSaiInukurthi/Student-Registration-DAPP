@@ -82,6 +82,16 @@ contract Election {
     //     require(now < electionDuration, "Election is close");
     //     _;
     // }
+    
+    function getCandidateData(address _candidateId) public view returns(address, string, string, string, uint, string){
+        return (candidateData[_candidateId].candidateId, candidateData[_candidateId].name, candidateData[_candidateId].email, candidateData[_candidateId].phoneNo, candidateData[_candidateId].consituencyId, candidateData[_candidateId].party);
+    }
+    
+    function getVoterData(address _voterId) public view returns(address, string, string, string, uint256, uint8){
+        return (voterData[_voterId].voterId,voterData[_voterId].name,voterData[_voterId].email,voterData[_voterId].phoneNo,voterData[_voterId].consituencyId,voterData[_voterId].age);
+    }
+    
+
     function addConsituency(uint _consituencyId, string _name) public onlyAdmin {
         require(!consituencyExist[_consituencyId], "Consituency already exist");
         consituencyExist[_consituencyId] = true;

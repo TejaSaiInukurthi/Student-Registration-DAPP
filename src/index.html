@@ -29,36 +29,36 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="Name">Name:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="candidateName" placeholder="Enter CanidateId(address)" name="candidateName">
+        <input type="text" class="form-control" id="candidateName" placeholder="Enter CanidateId(address)" name="candidateName" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="candidateemail">Email:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="candidateemail" placeholder="Enter Email" name="email">
+        <input type="text" class="form-control" id="candidateemail" placeholder="Enter Email" name="email" required>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="PhoneNo">PhoneNo:</label>
       <div class="col-sm-10">
-        <input type="number" class="form-control" id="canidatephoneno" placeholder="Enter PhoneNO" name="phooneno">
+        <input type="number" class="form-control" id="canidatephoneno" placeholder="Enter PhoneNO" name="phooneno" required>
       </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="candidateconstituency">Constituency Id:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="candidateconstituency" placeholder="Enter Candidate Name" name="candidateconstituency">
+        <input type="text" class="form-control" id="candidateconstituency" placeholder="Enter Candidate Name" name="candidateconstituency" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="candidateparty">Party</label>
       <div class="col-sm-10">          
-        <input type="password" class="form-control" id="candidateparty" placeholder="Enter party" name="candidateparty">
+        <input type="password" class="form-control" id="candidateparty" placeholder="Enter party" name="candidateparty" required>
       </div>
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">addCandidate</button>
+        <button id="addCandidate" class="btn btn-default">addCandidate</button>
       </div>
     </div>
   </form>
@@ -84,7 +84,7 @@
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button id="addConstituency" class="btn btn-default">Submit</button>
       </div>
     </div>
   </form>
@@ -131,7 +131,7 @@
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-default" id="addvoter">addCandidate</button>
+        <button class="btn btn-default" id="addvoter">AddVoter</button>
       </div>
     </div>
   </form>
@@ -158,13 +158,13 @@
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Caste Vote</button>
+        <button id="casteVote" class="btn btn-default">Cast Vote</button>
       </div>
     </div>
   </form>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <h3>Cancel Election</h3>
   <form class="form-horizontal">
     <div class="form-group">        
@@ -173,14 +173,14 @@
       </div>
     </div>
   </form>
-</div>
+</div> -->
 
 <div class="row">
   <h3>Get Admin</h3>
   <form class="form-horizontal">
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Get Admin</button>
+        <button id="admin" class="btn btn-default">Get Admin</button>
       </div>
     </div>
   </form>
@@ -193,12 +193,12 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="candidateid">Candidate Id:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="getcandidateconstituencyid" placeholder="Enter ConstituencyId" name="constituencyId">
+        <input type="text" class="form-control" id="getcandidateconstituencyid" placeholder="Enter CandidateId" name="constituencyId">
       </div>
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Get Candidate Data</button>
+        <button id="candidatedata" class="btn btn-default">Get Candidate Data</button>
       </div>
     </div>
   </form>
@@ -210,12 +210,12 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="candidateid">Candidate Id:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="candidateexistconstituencyid" placeholder="Enter ConstituencyId" name="constituencyId">
+        <input type="text" class="form-control" id="canidateexist" placeholder="Enter ConstituencyId" name="constituencyId">
       </div>
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button class="btn btn-default">Candidate Exist</button>
+        <button id="candidateexist"class="btn btn-default">Candidate Exist</button>
       </div>
     </div>
   </form>
@@ -250,11 +250,48 @@
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">check Constituency</button>
+        <button id="candidateexistbtn" class="btn btn-default">check Constituency</button>
       </div>
     </div>
   </form>
 </div>
+
+
+
+<div class="row">
+  <h3>Voter Data</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">Voter Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="getvoterid" placeholder="Enter VoterId" name="constituencyId">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button class="btn btn-default" id="getvoterdata">Get Voter Data</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+  <h3>Voter Exist</h3>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="candidateid">voter Id:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="voterexistid" placeholder="Enter ConstituencyId" name="constituencyId">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button id="voterexist" class="btn btn-default">check Voter</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 
 
 <div class="row">
@@ -274,7 +311,7 @@
   <form class="form-horizontal">
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Get Voterlist</button>
+        <button id="voterlist" class="btn btn-default">Get Voterlist</button>
       </div>
     </div>
   </form>
@@ -301,39 +338,11 @@
 
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" class="btn btn-default">Caste Vote</button>
+        <button id="getvotes" class="btn btn-default">get Vote</button>
       </div>
     </div>
   </form>
 </div>
-
-
-     <!--  --><!-- span --><!-- <label><b>Student info:</b></label>
-     <b></b>
-     <p><b>Address:</b><input type="number" id="address" placeholder=" Address" required /></p>
-<p></p><b>Name:</b><input type="text" id="name" placeholder="Student Name" required /></p>
-<p></p><label>Enter a date between 2020-01-01: 2020-12-31</label></p>
-<p></p><b>Date:</b><input type="date" name="myDate" min="2020-01-01" max="2020-12-31"></p>
-<p></p><b>Class:</b><input type="number" id="class" placeholder="Student Class" required /></p>
-<p></p><b>Rollno:</b><input type="number" id="rollno" placeholder=" Student Rollno" required /></p>
-<h4> Caste (General = 1, BC = 2, ST = 3, SC = 4).</h4>
-<p></p><b>Caste:</b><input type="number" id="caste" placeholder="Student Caste" required /></p>
-<p></p><b>Marks:</b><input type="number" id="marks" placeholder="Student Marks" required /></p>
-<button id="createAsset">Create Student</button>
-</div>
-<div style="text-align: center;">
-<p></p><label><b>Student Details:</b></label></p>
-<input type="number" id="trackstudent" placeholder="Address" required />
-<button id="trackinfo">Student Details</button>
-</div>
-</br>
-<div id = "response" style="text-align: center;">
-<p><b>Name:</b><span id="Name">??</span></p>
-<p><b>Class:</b><span id="Class">??</span></p>
-<p><b>Roll no:</b><span id="Rollno">??</span></p>
-<p><b>Caste:</b><span id="Caste">??</span></p>
-<p><b>Marks:</b><span id="Marks">??</span></p>
-<p><b>Total Fee:</b><span id="Fee">??</p> -->
 
 </div>
 <hr>
